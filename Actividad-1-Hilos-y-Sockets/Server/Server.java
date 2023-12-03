@@ -103,7 +103,7 @@ public class Server {
 				response = "\nLa Regenta, la gran novela del XIX español.\n\nAquí tienes:\n\n";
 				return response + getFileContent("regenta.txt");
 			case "4":
-				response = "\nEl lazarillo de Tormes, la obra cumbre de la picaresca española Regenta.\n\nAquí tienes:\n\n";
+				response = "\nEl lazarillo de Tormes, la obra cumbre de la picaresca española.\n\nAquí tienes:\n\n";
 				return response + getFileContent("lazarillo.txt");
 			case "5":
 				response = "\nLa Celestina, uno de los mejores ejemplos de comedia humanística.\n\nAquí tienes:\n\n";

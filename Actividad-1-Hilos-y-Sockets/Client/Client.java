@@ -31,11 +31,12 @@ public class Client {
                     if (serverMessage.equals("ENDMESSAGE")) {
                         break;
                     }
+                    // Si no, seguimos imprimiendo líneas de la respuesta
                     System.out.println(serverMessage);
                 }
 
                 // Pedimos al usuario que introduzca una opción
-                System.out.print("Elige una opción: ");
+                System.out.print("Elige una opción y pulsa ENTER: ");
 
                 // Leemos la opción elegida
                 String userChoice = userInputReader.readLine();
