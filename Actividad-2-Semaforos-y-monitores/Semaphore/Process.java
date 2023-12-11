@@ -17,6 +17,7 @@ class Process extends Thread {
      * 
      */
     public void run() {
+        // Inicializamos un generador de números aleatorios
         Random random = new Random();
 
         // Inicializamos la cantidad que se va a reservar
@@ -26,11 +27,8 @@ class Process extends Thread {
         // unidades del recurso en algún momento
         boolean acquired = false;
         do {
-            // Generamos una cantidad random de unidades, mientras que la cantidad generada
-            // sea 0
-            do {
-                unitsToReserve = random.nextInt(resource.getSize());
-            } while (unitsToReserve == 0);
+            // Generamos una cantidad random de unidades, entre 1 y el máximo posible
+            unitsToReserve = random.nextInt(1, resource.getSize());
 
             // Adquirimos el recurso
             acquired = resource.reserve(unitsToReserve);

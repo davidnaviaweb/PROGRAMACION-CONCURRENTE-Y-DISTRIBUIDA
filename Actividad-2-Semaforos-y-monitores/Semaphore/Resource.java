@@ -42,7 +42,7 @@ class Resource {
             if (r <= unitsAvailable) {
                 // Restamos las unidades adjudicadas a la cantidad de unidades disponibles
                 unitsAvailable -= r;
-                System.out.println(Thread.currentThread().getName() + " ha reservado " + r + " unidades del recurso.");
+                System.out.println(Thread.currentThread().getName() + " ha reservado " + r + " unidades del recurso. Quedan " + unitsAvailable + " unidades disponibles");
 
                 // Y seteamos el valor de retorno a True
                 acquired = true;
