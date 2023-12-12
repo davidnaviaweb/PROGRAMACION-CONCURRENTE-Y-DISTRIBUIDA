@@ -15,7 +15,7 @@ public class Main {
         // Generamos 10 hilos en los que cada cochecruzará el puente en una dirección aleatoria
 		for (int i=1 ; i<=10 ; i++){
             // Obtenemos una dirección aleatoria
-            String direction = generateRandomDirection();
+            String direction = generateRandomDirection(random);
 
             // Creamos un hilo para el nuevo coche
             (new Thread(new Car(bridge, direction), "Coche del " + direction + " número " + i)).start();
@@ -33,9 +33,8 @@ public class Main {
      * 
      * @return
      */
-    public static String generateRandomDirection() {
+    public static String generateRandomDirection(Random random) {
         String[] directions = {"norte", "sur"};
-        Random random = new Random();
         int index = random.nextInt(directions.length);
         return directions[index];
     }
